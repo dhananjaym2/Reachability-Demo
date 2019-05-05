@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name">Reachability Demo</string>
+  <string name="PleaseEnterAURLToCheckItsReachability">Please enter a URL to check it\'s reachability</string>
+  <string name="google_URL">https://google.com</string>
+  <string name="CheckReachability">Check Reachability</string>
+  <string name="ReachabilityResult">Reachability result:</string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/page_margin_all_sides"
+    tools:context=".MainActivity"
+    >
+
+  <TextView
+      android:id="@+id/textViewEnterUrl"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/PleaseEnterAURLToCheckItsReachability"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <EditText
+      android:id="@+id/editTextUrl"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:autofillHints="@string/google_URL"
+      android:hint="@string/PleaseEnterAURLToCheckItsReachability"
+      android:inputType="textUri"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/textViewEnterUrl"
+      />
+
+  <Button
+      android:id="@+id/buttonCheckReachability"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/CheckReachability"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/editTextUrl"
+      />
+
+  <TextView
+      android:id="@+id/textViewReachabilityResult"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/ReachabilityResult"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/buttonCheckReachability"
+      />
+
+  <TextView
+      android:id="@+id/textViewReachabilityResultValue"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textViewReachabilityResult"
+      tools:text="ReachabilityResultValue"
+      />
+
+  <ProgressBar
+      android:id="@+id/progressBarWaitingForResult"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textViewReachabilityResultValue"
+      tools:visibility="visible"
+      style="@style/Widget.AppCompat.ProgressBar"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
